@@ -17,7 +17,7 @@ namespace masking_sensitive_information
 
 
 
-            Console.WriteLine($"You typed '{usersSecret}. Oh no. It's not concealed. How about this?'");
+            Console.WriteLine($"You typed '{usersSecret}'. Oh no. It's not concealed. How about this?'");
             Console.WriteLine("\n");
 
 
@@ -52,16 +52,8 @@ namespace masking_sensitive_information
 
 
 
-            Console.WriteLine($"When we recombine both of those variables we get {redactedAndExposedCombined}");
+            Console.WriteLine($"When we recombine both of those variables we get '{redactedAndExposedCombined}'");
             Console.WriteLine("\n");
-
-
-
-
-            // how do i print a certain number of * to replace the first part of the secrete while exposing the last four parts using the variable above
-
-
-
 
 
 
@@ -69,16 +61,18 @@ namespace masking_sensitive_information
 
 
 
-            Console.WriteLine("Let's learn about masking information.");
+            Console.WriteLine("Let's try a different way behind the scenes. This time we will work with a fixed number of digits.");
                     Console.WriteLine("\n");
+
+
 
             Console.WriteLine("First, enter a completly made up 10-digit number to your top secret offshore account.");
                     Console.WriteLine("\n");
 
 
+
             var userEnteredTenDigitNumber = Console.ReadLine();
 
-            var convertedAccountNumber = Int32.Parse(userEnteredTenDigitNumber);
 
 
             do
@@ -90,15 +84,17 @@ namespace masking_sensitive_information
 
             while (userEnteredTenDigitNumber.Length != 10);
             {
-                Console.WriteLine("Excellent. Let's move on.");
+                Console.WriteLine("Excellent.");
                 Console.WriteLine("\n");
-
             }
+
 
 
             var maskedAccountNumber = userEnteredTenDigitNumber.Substring(6, 4);
 
-            Console.WriteLine($"You entered: '{userEnteredTenDigitNumber}' and your maskedAccountNumber would be: XXXXXX{maskedAccountNumber}");
+
+
+            Console.WriteLine($"You entered: '{userEnteredTenDigitNumber}' and your maskedAccountNumber would be: 'XXXXXX{maskedAccountNumber}'");
             Console.WriteLine("\n");
 
             Console.ReadKey();
