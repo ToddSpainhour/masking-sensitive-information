@@ -17,7 +17,7 @@ namespace masking_sensitive_information
 
 
 
-            Console.WriteLine($"You typed '{usersSecret}'. Oh no. It's not concealed. How about this?'");
+            Console.WriteLine($"You typed '{usersSecret}'. Oh no. It's not concealed. How about this?");
             Console.WriteLine("\n");
 
 
